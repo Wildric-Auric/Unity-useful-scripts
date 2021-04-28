@@ -71,7 +71,6 @@ public class PlayerController2D : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.R)) { SceneManager.LoadScene(SceneManager.GetActiveScene().name);}
         grounded = Physics2D.OverlapCircle(center.position, radiusOfGroundChecking, groundMask);
         if (!grounded) { actualJumpBuffer -= Time.fixedDeltaTime; } else if (actualJumpBuffer != jumpBuffer) { actualJumpBuffer = jumpBuffer; }
 
